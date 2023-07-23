@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" href="duck.gif" type="image/x-icon">
+    <style>
+        body {
+            background-image: url("100w.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* Add any additional styling you want for the body */
+            /* For example, you can set the font color, etc. */
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: black;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="text" id="email" name="email" required><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br>
+
+            
+        </form>
+        <form id="contact-form" method="post" action="send_email.php">
+            <!-- Form fields (input, textarea, etc.) go here -->
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+          </form>
+          
+    </div>
+</body>
+</html>
+
+
+
+
+
+
