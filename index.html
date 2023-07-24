@@ -3,273 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhijeet's Portfolio (under devlopment)</title>
+    <title>Abhijeet's Portfolio (under development)</title>
     <link rel="icon" href="download.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-        } 
-        nav
-        {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            height: 80px;
-            background-color: rgb(21, 20, 20);
-        }
-        nav ul{
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li{ 
-            list-style: none;
-            margin: 0 25px;
-        }
-        nav ul li a{
-            text-decoration: none;
-            color: white;
-        }
-        nav ul li a:hover{
-            color: aquamarine;
-            font-size: 1.5rem;
-        }
-        .left{
-            color:whitesmoke;
-            font-size: 1.8rem;
-        }
-        .firstsection{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 120px;
-        }
-
-        .leftsection{
-            
-            font-size: 3rem;
-        }
-        .btn{
-            padding: 12px;
-            color: white;
-            border: 2px solid white;
-            background: black;
-            border: radius 5px;
-            font-size: 20px ;
-            cursor: pointer;
-        }
-        .buttons{
-            padding: 15px 0;
-        }
-        .red{
-            color: red;
-        }
-        .purple{
-            color: aqua;
-        }
-        #element{
-            color: aqua;
-        }
-        .secondsection{
-            margin: auto;
-            max-width: 80vw;
-        }
-        .secondsection h1 a{
-            text-decoration: solid;
-            color: rgb(83, 208, 167) ;
-        }
-        .secondsection h1 a:hover{
-            color: aquamarine;
-            font-size: larger;
-        }
-        footer{
-            background-color: rgb(59, 51, 51);
-            
-            opacity: 0.6;
-        }
-        .footer{
-            display: flex;
-            padding: 23px 122px;
-            justify-content: space-evenly;
-        }
-        .footer ul{
-            list-style: none;
-        }
-        .footerrights{
-            text-align: center;
-            color: gray;
-            padding: 15px ;
-        }
-        
-       
-        
-        #about-me h2{
-            font-size: 5vw;
-            text-align: center;
-            margin-bottom: 30px;
-            color: rgb(237, 45, 45);
-            }
-        /* Modal */
-        .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-}
-
-.modal-content {
-    background-color: #181818;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    border-radius: 5px;
-    width: 80%;
-    text-align: center;
-}
-
-.close {
-    color: #fcfbfb;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-        
-@media screen and (max-width: 768px) {
-            /* Mobile Styles */
-
-            /* Adjust any specific mobile styles here */
-            body {
-                font-size: 14px; /* Adjust the base font size for smaller screens */
-            }
-
-            .left {
-                font-size: 1.5rem;
-            }
-
-            .firstsection {
-                flex-direction: column-reverse;
-                margin: 10px;
-            }
-
-            .secondsection h1 {
-                font-size: 24px;
-            }
-
-            .about-text {
-                margin-right: 0;
-            }
-
-            .footer {
-                padding: 10px;
-            }
-
-            .footer ul {
-                margin: 3px 0;
-            }
-
-            .footerrights {
-                padding: 3px;
-            }
-            nav .fa-bars::before {
-        content: "\f0c9"; /* Unicode for the "bars" icon */
-        font-family: "Font Awesome 5 Free";
-        display: inline-block;
-        font-weight: 900;
-        font-size: 20px;
-        margin-right: 5px;
-    }
-
-    nav ul {
-        position: fixed;
-        top: 0;
-        right: -300px; /* Initial position, off the screen */
-        height: 100%;
-        width: 300px; /* Width of the sliding menu */
-        background-color: rgb(21, 20, 20);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 80px; /* Adjust this value to give space for the header */
-        transition: right 0.3s ease; /* Smooth sliding animation */
-    }
-
-    nav ul.show {
-        right: 0; /* Sliding in the menu */
-    }
-}
-/* Your existing CSS styles */
-
-/* Hide the hamburger icon on desktop view */
-@media screen and (min-width: 769px) {
-    nav .fa-bars {
-        display: none;
-    }
-}
-
-/* Show the hamburger icon on mobile view */
-@media screen and (max-width: 768px) {
-    nav .fa-bars {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
-        margin-left: 10px;
-    }
-}
-
-/* Rest of your existing CSS for mobile styles */
-
-    </style>
-</head>
-<body>
-        
-    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav>
             <div class="left"><strong>Abhijeet's Portfolio</strong></div>
-            <div class="right"></div>
             <!-- Add the "hamburger" icon only for mobile view -->
             <i class="fas fa-bars" onclick="toggleMobileMenu()"></i>
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="#home">Home</a></li>
                 <li><a href="#about-me">About</a></li>
                 <li><a href="#" onclick="showPopup('services')">Services</a></li>
                 <li><a href="#" onclick="showPopup('projects')">Projects</a></li>
-                <li><a href="Contact us.html">Contact Me</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
         </nav>
-        
     </header>
+    
     <main>
-        <section class="firstsection">
-            <div class="leftsection"><span class="red"><strong>Hello</strong></span>
-                , My name is  <span class="purple">
-                    Abhijeet.
-                </span>
+        <section id="home" class="firstsection">
+            <div class="leftsection">
+                <span class="red"><strong>Hello</strong></span>,
+                My name is <span class="purple">Abhijeet.</span>
                 <div>
                     And I am a <span id="element"></span>
                 </div>
@@ -279,8 +41,7 @@
                 </div>
             </div>
             <div class="rightsection">
-                <img src="bg1.png" alt="" style="height: 300px;margin: 21px;">
-                
+                <img src="bg1.png" alt="" style="height: 300px;">
             </div>
         </section>
 
@@ -289,31 +50,19 @@
             <h1><a href="https://www.linkedin.com/in/abhijeet-shaw-2ab378206/" target="_blank">Know more</a></h1>
             <hr>
         </section>
-        
-    
-        <section id="about-me" style="text-align: center;">
-            <h2 data-tilt style="font-weight: bold; margin: 50px 0px;">About Me</h2>
-            <div style="display: flex; align-items: flex-start; justify-content: center;">
-                <img src="bg3.png" alt="Abhijeet Shaw" style="height: 600px; margin-right: 20px;">
-                <div class="about-text" style="text-align: left;">
-                    <p style="font-size: 24px;
-                    margin: -17px 18px;
-                    padding: 21px;">Hi there! I'm <strong>Abhijeet Shaw</strong>, an aspiring computer science student with a passion for technology and creative problem-solving. Currently, I'm pursuing my B.Tech degree from <a href="https://jiscollege.ac.in">JISCE</a>, and I'm eagerly looking forward to graduating in 2026.</p>
 
-                    <p style="font-size: 24px;
-                    margin: 35px;
-                    padding: 42px 44p">Throughout my academic journey, I have gained experience in various programming languages, including Java, HTML, JS, and CSS. I have also worked on several projects that involve web development, software development, and data analysis.</p>
-
-                    <p style="font-size: 24px;margin: 32px;">Beyond my academic pursuits, I take great pleasure in staying abreast of the latest trends and advancements in the tech industry. To ensure I stay ahead of the curve, I actively participate in seminars, conferences, and workshops, always seeking opportunities to expand my knowledge and skills.</p>
-
-                    <p style="font-size: 24px; margin: 28px;">If you have any questions or would like to learn more about my experiences and skills, please don't hesitate to reach out. I'd be thrilled to connect with you and discuss potential opportunities. Let's make an impact together!</p>
+        <section id="about-me" class="about-section">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="bg3.png" alt="Abhijeet Shaw">
+                <div class="about-text">
+                    <p>Hi there! I'm <strong>Abhijeet Shaw</strong>, an aspiring computer science student with a passion for technology and creative problem-solving. Currently, I'm pursuing my B.Tech degree from <a href="https://jiscollege.ac.in">JISCE</a>, and I'm eagerly looking forward to graduating in 2026.</p>
+                    <p>Throughout my academic journey, I have gained experience in various programming languages, including Java, HTML, JS, and CSS. I have also worked on several projects that involve web development, software development, and data analysis.</p>
+                    <p>Beyond my academic pursuits, I take great pleasure in staying abreast of the latest trends and advancements in the tech industry. To ensure I stay ahead of the curve, I actively participate in seminars, conferences, and workshops, always seeking opportunities to expand my knowledge and skills.</p>
+                    <p>If you have any questions or would like to learn more about my experiences and skills, please don't hesitate to reach out. I'd be thrilled to connect with you and discuss potential opportunities. Let's make an impact together!</p>
                 </div>
             </div>
         </section>
-        
-         
-        
-        
     </main>
 
     <div id="popup-modal" class="modal">
@@ -322,24 +71,21 @@
             <p id="popup-message"></p>
         </div>
     </div>
-    
 
-    <footer>
-        <div class="footer">
-            <div class="footerfirst">
-                <h3>Abhijeet's Devloper Portfolio</h3>
-                
+    <footer id="contact" class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Abhijeet's Developer Portfolio</h3>
             </div>
-            <div class="footersecond"></div>
-            <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Services</li>
-                <li>Projects</li>
-                <li>Contact Me</li>
+            <ul class="footer-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about-me">About</a></li>
+                <li><a href="#" onclick="showPopup('services')">Services</a></li>
+                <li><a href="#" onclick="showPopup('projects')">Projects</a></li>
+                <li><a href="#contact">Contact Me</a></li>
             </ul>
-            <div class="footerthird">
-                <!-- Add Instagram and email links with Font Awesome icons -->
+            <div class="footer-social">
+                <!-- Add social media links with Font Awesome icons -->
                 <a href="https://www.instagram.com/your_instagram_username" target="_blank" title="Instagram">
                     <i class="fab fa-instagram"></i>
                 </a>
@@ -347,103 +93,11 @@
                     <i class="fas fa-envelope"></i>
                 </a>
             </div>
-            
-            <div class="footerfourth">
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Projects</li>
-                    <li>Contact Me</li>
-                </ul>
-            </div>
-  </div>
-  <div class="footerrights" style="text-align: center;">
-   Copyright &copy; abhijeetsportsfolio.com | All rights reserved
-  </div>
+        </div>
+        <div class="footerrights">© 2023 Abhijeet's Portfolio | All rights reserved</div>
     </footer>
-    
-    <script>
-        // Function to handle smooth scrolling for anchor links
-        function smoothScrollTo(target) {
-            const headerHeight = 80; // Adjust this value based on your header's height
-            const element = document.querySelector(target);
-            const topOffset = element.getBoundingClientRect().top;
-            const totalScrollOffset = topOffset - headerHeight;
 
-            window.scrollBy({
-                top: totalScrollOffset,
-                behavior: 'smooth'
-            });
-        }
-
-        // Event listener for anchor links
-        document.addEventListener('click', function (event) {
-            if (event.target.tagName === 'A' && event.target.getAttribute('href').startsWith('#')) {
-                event.preventDefault();
-                const target = event.target.getAttribute('href');
-                smoothScrollTo(target);
-            }
-        });
-    </script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-          strings: ['Student.', 'Web Devloper.','Video Editor.','Photo Editor'],
-          typeSpeed: 50,
-        });
-
-      </script>
-    
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
-
-    <script>
-    // JavaScript code to add tilt effect to the heading
-    const tiltHeading = document.getElementById('tilt-heading');
-    tiltHeading.addEventListener('mousemove', (e) => {
-        const xAxis = (window.innerWidth / 2 - e.pageX) / 20;
-        const yAxis = (window.innerHeight / 2 - e.pageY) / 20;
-        tiltHeading.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-    });
-
-    tiltHeading.addEventListener('mouseleave', () => {
-        tiltHeading.style.transform = 'rotateY(0deg) rotateX(0deg)';
-    });
-    </script>
-
-<script>
-    function showPopup(section) {
-        const popupModal = document.getElementById("popup-modal");
-        const popupMessage = document.getElementById("popup-message");
-
-        if (section === "services") {
-            popupMessage.textContent = "Services section is currently under development.";
-        } else if (section === "projects") {
-            popupMessage.textContent = "Projects section is currently under development.";
-        }
-
-        popupModal.style.display = "block";
-    }
-
-    function closePopup() {
-        const popupModal = document.getElementById("popup-modal");
-        popupModal.style.display = "none";
-    }
-</script>
-
-<script>
-    // Your existing JavaScript code
-
-    // Add a function to toggle the mobile navigation menu
-    function toggleMobileMenu() {
-        const navList = document.querySelector("nav ul");
-        navList.classList.toggle("show");
-    }
-</script>
-
-
-
-    
+    <script src="main.js"></script>
 </body>
 </html>

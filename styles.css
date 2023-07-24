@@ -1,0 +1,228 @@
+* {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        } 
+        nav
+        {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(21, 20, 20);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{ 
+            list-style: none;
+            margin: 0 25px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover{
+            color: aquamarine;
+            font-size: 1.5rem;
+        }
+        .left{
+            color:whitesmoke;
+            font-size: 1.8rem;
+        }
+        .firstsection{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 120px;
+        }
+
+        .leftsection{
+            
+            font-size: 3rem;
+        }
+        .btn{
+            padding: 12px;
+            color: white;
+            border: 2px solid white;
+            background: black;
+            border: radius 5px;
+            font-size: 20px ;
+            cursor: pointer;
+        }
+        .buttons{
+            padding: 15px 0;
+        }
+        .red{
+            color: red;
+        }
+        .purple{
+            color: aqua;
+        }
+        #element{
+            color: aqua;
+        }
+        .secondsection{
+            margin: auto;
+            max-width: 80vw;
+        }
+        .secondsection h1 a{
+            text-decoration: solid;
+            color: rgb(83, 208, 167) ;
+        }
+        .secondsection h1 a:hover{
+            color: aquamarine;
+            font-size: larger;
+        }
+        footer{
+            background-color: rgb(59, 51, 51);
+            
+            opacity: 0.6;
+        }
+        .footer{
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+        .footer ul{
+            list-style: none;
+        }
+        .footerrights{
+            text-align: center;
+            color: gray;
+            padding: 15px ;
+        }
+        
+       
+        
+        #about-me h2{
+            font-size: 5vw;
+            text-align: center;
+            margin-bottom: 30px;
+            color: rgb(237, 45, 45);
+            }
+        /* Modal */
+        .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #181818;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%;
+    text-align: center;
+}
+
+.close {
+    color: #fcfbfb;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+        
+@media screen and (max-width: 768px) {
+            /* Mobile Styles */
+
+            /* Adjust any specific mobile styles here */
+            body {
+                font-size: 14px; /* Adjust the base font size for smaller screens */
+            }
+
+            .left {
+                font-size: 1.5rem;
+            }
+
+            .firstsection {
+                flex-direction: column-reverse;
+                margin: 10px;
+            }
+
+            .secondsection h1 {
+                font-size: 24px;
+            }
+
+            .about-text {
+                margin-right: 0;
+            }
+
+            .footer {
+                padding: 10px;
+            }
+
+            .footer ul {
+                margin: 3px 0;
+            }
+
+            .footerrights {
+                padding: 3px;
+            }
+            nav .fa-bars::before {
+        content: "\f0c9"; /* Unicode for the "bars" icon */
+        font-family: "Font Awesome 5 Free";
+        display: inline-block;
+        font-weight: 900;
+        font-size: 20px;
+        margin-right: 5px;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Initial position, off the screen */
+        height: 100%;
+        width: 300px; /* Width of the sliding menu */
+        background-color: rgb(21, 20, 20);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 80px; /* Adjust this value to give space for the header */
+        transition: right 0.3s ease; /* Smooth sliding animation */
+    }
+
+    nav ul.show {
+        right: 0; /* Sliding in the menu */
+    }
+}
+/* Your existing CSS styles */
+
+/* Hide the hamburger icon on desktop view */
+@media screen and (min-width: 769px) {
+    nav .fa-bars {
+        display: none;
+    }
+}
+
+/* Show the hamburger icon on mobile view */
+@media screen and (max-width: 768px) {
+    nav .fa-bars {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+        margin-left: 10px;
+    }
+}
